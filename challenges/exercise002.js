@@ -17,42 +17,26 @@ export function isFromManchester(person) {
 export function getBusNumbers(people) {
 	if (people === undefined) throw new Error('people is required');
 	// Your code here!
-/*
-
-describe('getBusNumbers', () => {
-	// A bus can hold 40 people. This function should return how many buses are required for the number of people
-	test('returns 1 if all the people fit in 1 bus', () => {
-		expect(getBusNumbers(1)).toBe(1);
-		expect(getBusNumbers(10)).toBe(1);
-		expect(getBusNumbers(25)).toBe(1);
-		expect(getBusNumbers(39)).toBe(1);
-		expect(getBusNumbers(40)).toBe(1);
-	});
-
-	test('returns 2 if 2 buses are required', () => {
-		expect(getBusNumbers(41)).toBe(2);
-		expect(getBusNumbers(50)).toBe(2);
-		expect(getBusNumbers(55)).toBe(2);
-		expect(getBusNumbers(80)).toBe(2);
-	});
-
-	test('returns 3 if 3 buses are required', () => {
-		expect(getBusNumbers(81)).toBe(3);
-		expect(getBusNumbers(85)).toBe(3);
-		expect(getBusNumbers(100)).toBe(3);
-		expect(getBusNumbers(120)).toBe(3);
-	});
-
-	test('returns the correct number of buses for larger numbers of people', () => {
-		expect(getBusNumbers(43728)).toBe(1094);
-	});
-});
-*/
+	let noofBuses = 0;
+	const noOfBuses = Math.floor(people / 40);
+	console.log(noOfBuses)
+  if (people % 40 > 0) {
+	     return noOfBuses + 1; 
+    } else {
+			 return noOfBuses; 
+    }
 }
 
 export function countSheep(arr) {
 	if (arr === undefined) throw new Error('arr is required');
-	// Your code here!
+	let sheepCount = 0;
+	for (const item of arr) {
+		if (item === 'sheep') {
+				sheepCount++;
+		}
+}
+console.log(sheepCount);
+return sheepCount;
 }
 
 export function hasMPostCode(person) {
