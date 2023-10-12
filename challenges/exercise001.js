@@ -53,12 +53,12 @@ export function getMiddleCharacter(str) {
 
 	const middleCharacter = Math.floor(str.length / 2);
 	console.log(' String is '+str+' length is ' + str.length);
-	console.log(str.length%2);
+	//console.log(str.length%2);
 	if (str.length % 2 === 1) {
-			console.log(' str is odd '+ str +' Middle character is '+str.charAt(middleCharacter))
+			//console.log(' str is odd '+ str +' Middle character is '+str.charAt(middleCharacter))
 			return str.charAt(middleCharacter);
 	} else {
-			console.log('String is Even ' +str.slice(middleCharacter - 1, middleCharacter + 1));
+			//console.log('String is Even ' +str.slice(middleCharacter - 1, middleCharacter + 1));
 			return str.slice(middleCharacter - 1, middleCharacter+1);
 	}
 
@@ -67,6 +67,11 @@ export function getMiddleCharacter(str) {
 export function reverseWord(word) {
 	if (word === undefined) throw new Error('word is required');
 	// Add your code here!
+	const words = word.split(' ');
+  for (let i = 0; i < words.length; i++) {
+	words[i] = words[i].split('').reverse().join('');
+	}
+	return words.reverse().join(' ');	
 }
 
 export function reverseAllWords(words) {
