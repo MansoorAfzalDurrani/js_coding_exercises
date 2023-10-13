@@ -12,6 +12,12 @@ return numsSquareArray;
 export function camelCaseWords(words) {
 	if (words === undefined) throw new Error('words is required');
 	// Your code here!
+	let camelCasedWord = words[0];
+	for(let index=1; index<words.length; index++){
+		camelCasedWord += words[index].charAt(0).toUpperCase()+words[index].slice(1);
+	}
+	console.log(camelCasedWord);
+	return camelCasedWord;
 }
 
 export function getTotalSubjects(people) {
