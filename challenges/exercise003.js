@@ -1,13 +1,12 @@
 export function getSquares(nums) {
 	if (nums === undefined) throw new Error('nums is required');
 	// Your code here!
-	console.log(nums);
+	
 	let numsSquareArray=[];
 	for(let index=0; index<nums.length; index++){
 		numsSquareArray[index]=nums[index] * nums[index];
 	}
-	//console.log(numsSquareArray);
-	return numsSquareArray;
+return numsSquareArray;
 }
 
 export function camelCaseWords(words) {
@@ -18,6 +17,13 @@ export function camelCaseWords(words) {
 export function getTotalSubjects(people) {
 	if (people === undefined) throw new Error('people is required');
 	// Your code here!
+	let totalSubjects = 0;
+  for (let nameIndex = 0; nameIndex < people.length; nameIndex++) {
+    totalSubjects += people[nameIndex]["subjects"].length;
+  }
+	//console.log(totalSubjects);
+  return totalSubjects;
+	
 }
 
 export function checkIngredients(menu, ingredient) {
