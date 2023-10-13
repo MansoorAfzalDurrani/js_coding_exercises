@@ -19,8 +19,7 @@ export function getBusNumbers(people) {
 	// Your code here!
 	let noofBuses = 0;
 	const noOfBuses = Math.floor(people / 40);
-	console.log(noOfBuses)
-  if (people % 40 > 0) {
+	  if (people % 40 > 0) {
 	     return noOfBuses + 1; 
     } else {
 			 return noOfBuses; 
@@ -35,11 +34,17 @@ export function countSheep(arr) {
 				sheepCount++;
 		}
 }
-console.log(sheepCount);
 return sheepCount;
 }
 
 export function hasMPostCode(person) {
 	if (person === undefined) throw new Error('person is required');
 	// Your code here!
+	const firstChar = person.address.postCode.charAt(0)
+	//console.log(firstChar + person.address.city);
+	if (firstChar === 'M' && person.address.city   ==='Manchester') {
+		return true;
+		}else{
+			return false;
+		}
 }
