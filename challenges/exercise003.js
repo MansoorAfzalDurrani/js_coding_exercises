@@ -38,15 +38,21 @@ export function checkIngredients(menu, ingredient) {
 	// Your code here!
 	//console.log(' menu[0].ingredients '+menu[0].ingredients);
 	for (let item of menu) {
+		//if (menu[index].ingredients === ingredient) is any proglem with this check with teacher.
     if (item.ingredients.includes(ingredient)) {
       return true;
     }
   }
 	return false;	
 }
-
 export function duplicateNumbers(arr1, arr2) {
 	if (arr1 === undefined) throw new Error('arr1 is required');
 	if (arr2 === undefined) throw new Error('arr2 is required');
-	// Your code here!
-}
+	const duplicates = [];
+  for (let number of arr1) {
+    if (arr2.includes(number) && !duplicates.includes(number)) {
+      duplicates.push(number);
+    }
+  }
+  return duplicates.sort();
+}	
