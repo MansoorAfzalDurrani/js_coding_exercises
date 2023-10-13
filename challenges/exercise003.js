@@ -16,7 +16,7 @@ export function camelCaseWords(words) {
 	for(let index=1; index<words.length; index++){
 		camelCasedWord += words[index].charAt(0).toUpperCase()+words[index].slice(1);
 	}
-	console.log(camelCasedWord);
+	//console.log(camelCasedWord);
 	return camelCasedWord;
 }
 
@@ -36,6 +36,13 @@ export function checkIngredients(menu, ingredient) {
 	if (menu === undefined) throw new Error('menu is required');
 	if (!ingredient) throw new Error('ingredient is required');
 	// Your code here!
+	//console.log(' menu[0].ingredients '+menu[0].ingredients);
+	for (let item of menu) {
+    if (item.ingredients.includes(ingredient)) {
+      return true;
+    }
+  }
+	return false;	
 }
 
 export function duplicateNumbers(arr1, arr2) {
