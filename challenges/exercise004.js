@@ -65,6 +65,12 @@ export function getCities(users) {
 export function getSquareRoots(nums) {
 	if (!nums) throw new Error('nums is required');
 	// Your code here
+	const squareRoots = [];
+	for(let num of nums){
+		const squarRoot =Math.sqrt(num).toFixed(2);
+		squareRoots.push(parseFloat(squarRoot));
+	}
+	return squareRoots;
 }
 
 export function findSentencesContaining(sentences, str) {
