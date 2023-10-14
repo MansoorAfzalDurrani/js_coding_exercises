@@ -14,6 +14,13 @@ export function findNamesBeginningWith(names, char) {
 	if (!names) throw new Error('names is required');
 	if (!char) throw new Error('char is required');
 	// Your code here
+	let nameFound =[];
+	for(let index=0; index<names.length;index++){
+		if(names[index].charAt(0) === char){
+			nameFound.push(names[index]);
+		}		
+	}
+	return nameFound;
 }
 
 export function findVerbs(words) {
