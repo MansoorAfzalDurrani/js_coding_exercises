@@ -77,6 +77,14 @@ export function findSentencesContaining(sentences, str) {
 	if (!sentences) throw new Error('sentences is required');
 	if (!str) throw new Error('str is required');
 	// Your code here
+	const matchingSentences = [];
+
+  for (let sentence of sentences) {
+    if (sentence.toLowerCase().includes(str.toLowerCase())) {
+      matchingSentences.push(sentence);
+    }
+  }
+  return matchingSentences;		
 }
 
 export function getLongestSides(triangles) {
