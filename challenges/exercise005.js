@@ -2,6 +2,17 @@ export const findNextNumber = (nums, n) => {
 	if (nums === undefined) throw new Error('nums is required');
 	if (n === undefined) throw new Error('n is required');
 	// Your code here!
+	let repeatNum = null;
+	for(let index=0; index<nums.length;index++){
+		
+		if(nums[index] === n && index !== (nums.length-1)){
+			if(nums[index+1] !== repeatNum){
+			repeatNum = nums[index+1];
+			return nums[index+1];
+			}	 
+	}
+}
+ return null;
 };
 
 export const count1sand0s = (str) => {
