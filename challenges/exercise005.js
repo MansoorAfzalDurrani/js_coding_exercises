@@ -34,7 +34,12 @@ export const count1sand0s = (str) => {
 
 export const reverseNumber = (n) => {
 	if (n === undefined) throw new Error('n is required');
-	// Your code here!
+	let reversedNumber = [];
+  n = n.toString();
+  for (let index = n.length - 1; index >= 0; index--) {
+    reversedNumber.push(parseInt(n.charAt(index)));
+  }
+ return parseInt(reversedNumber.join(''));	
 };
 
 export const sumArrays = (arrs) => {
