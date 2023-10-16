@@ -66,6 +66,13 @@ export const findNeedle = (haystack, searchTerm) => {
 	if (haystack === undefined) throw new Error('haystack is required');
 	if (searchTerm === undefined) throw new Error('searchTerm is required');
 	// Your code here!
+	
+	for(const key in haystack){
+				if(typeof haystack[key] === 'string' && haystack[key].includes(searchTerm)){
+			return true;
+		}
+	}
+	return false;
 };
 
 export const getWordFrequencies = (str) => {
